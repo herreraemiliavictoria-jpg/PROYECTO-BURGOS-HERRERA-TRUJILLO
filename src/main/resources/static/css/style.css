@@ -1,0 +1,142 @@
+:root {
+    --gym-bg: #F4F3F9;
+    --gym-dark: #1E1B4B;
+    --gym-primary: #6C5CE7;
+    --gym-secondary: #A29BFE;
+    --gym-accent: #E84393;
+    --gym-light-lilac: #EDE9FE;
+    --gym-active: #10B981;
+    --gym-expired: #F43F5E;
+}
+
+body {
+    background-color: var(--gym-bg);
+    color: #2D3436;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor principal para centrar el contenido vertical y horizontalmente */
+.main-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tarjeta principal del Index con diseño moderno */
+.hero-card {
+    background: #ffffff;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(108, 92, 231, 0.12);
+    padding: 3rem 2.5rem;
+    max-width: 650px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.hero-card:hover {
+    transform: translateY(-5px);
+}
+
+.hero-title {
+    color: var(--gym-dark);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+    color: #636E72;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* Barra de navegación y pie de página */
+.navbar-gym, footer {
+    background: linear-gradient(135deg, var(--gym-dark) 0%, #312E81 100%);
+    color: #ffffff;
+}
+
+/* Tarjetas de Formularios */
+.card-gym {
+    background-color: #ffffff;
+    border: none;
+    border-top: 4px solid var(--gym-primary);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(108, 92, 231, 0.08);
+}
+
+.card-gym-header {
+    background-color: var(--gym-light-lilac);
+    color: var(--gym-dark);
+    font-weight: 600;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Botones personalizados mejorados */
+.btn-gym-primary {
+    background-color: var(--gym-primary);
+    border-color: var(--gym-primary);
+    color: #ffffff;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(108, 92, 231, 0.2);
+}
+
+.btn-gym-primary:hover {
+    background-color: #5849C4;
+    border-color: #5849C4;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(108, 92, 231, 0.3);
+}
+
+.btn-gym-success {
+    background-color: var(--gym-active);
+    border-color: var(--gym-active);
+    color: #ffffff;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.btn-gym-success:hover {
+    background-color: #059669;
+    border-color: #059669;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.btn-gym-secondary {
+    background-color: #64748B;
+    border-color: #64748B;
+    color: #ffffff;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.btn-gym-secondary:hover {
+    background-color: #475569;
+    border-color: #475569;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Tablas de Socios */
+.table-gym thead {
+    background-color: var(--gym-primary);
+    color: #ffffff;
+}
+
+.table-gym tbody tr:hover {
+    background-color: var(--gym-light-lilac);
+}

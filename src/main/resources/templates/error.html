@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <title>Aviso del Sistema - PowerGym Manager</title>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- Carga de Bootstrap y tus estilos -->
+      <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" type="text/css" />
+      <link rel="stylesheet" th:href="@{/css/style.css}" type="text/css" />
+   </head>
+   <body>
+      
+      <!-- Encabezado con menú hamburguesa -->
+      <div th:insert="header :: header"></div>
+
+      <!-- Tarjeta central de error -->
+      <div class="main-container container my-5">
+         <div class="hero-card text-center mx-auto">
+            <h1 class="display-3 fw-bold text-danger mb-3">⚠️ ¡Ups!</h1>
+            
+            <!-- Muestra el título personalizado si viene de una excepción, o el 404 por defecto -->
+            <h2 class="hero-title mb-3" th:text="${mensajeError != null ? mensajeError : 'Página no disponible (Error 404)'}"></h2>
+            
+            <!-- Muestra el detalle técnico o un texto amigable -->
+            <p class="hero-subtitle" th:text="${detalle != null ? detalle : 'La ruta a la que intentas acceder no existe o ocurrió un inconveniente al procesar tu solicitud.'}"></p>
+            
+            <div class="mt-4">
+               <a th:href="@{/index}" class="btn btn-gym-primary btn-lg px-4">🏠 Volver al Inicio</a>
+            </div>
+         </div>
+      </div>
+
+      <!-- Pie de página -->
+      <div th:insert="footer :: footer"></div>
+
+      <!-- Script CDN de Bootstrap para que funcione el menú hamburguesa -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   </body>
+</html>
